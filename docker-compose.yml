@@ -1,0 +1,14 @@
+version: '3.5'
+services:
+   db_auth:
+      restart: always
+      container_name: db_auth
+      image: postgres:13-alpine 
+      environment:
+         POSTGRES_USER: admin
+         POSTGRES_PASSWORD: root
+         POSTGRES_DB: postgres
+      volumes:
+         - ./pgdata:/var/lib/postgresql/data
+      ports:
+         - '5432:5432'
