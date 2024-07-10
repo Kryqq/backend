@@ -1,6 +1,6 @@
 import pg from 'pg';
 
-const newUser = async (name, surname) => {
+const newUser = async (name: string, surname:string) => {
    try {
       const client = new pg.Client({
          user: 'admin',
