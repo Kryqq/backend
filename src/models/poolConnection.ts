@@ -1,4 +1,5 @@
 import pg from 'pg';
+
  export const pool = new pg.Pool({
    user: 'admin',
    password: 'root',
@@ -7,3 +8,4 @@ import pg from 'pg';
    port: 5432,
 });
 
+ 
