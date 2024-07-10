@@ -1,10 +1,12 @@
 import Router from 'express';
 import bcrypt from 'bcryptjs';
-import { pool } from '../models/poolConnection.js';
+
+import { pool } from '../models/poolConnection';
+import { Request, Response } from 'express';
 
 const registerRouter = Router();
 
-registerRouter.post('/', async (req, res) => {
+registerRouter.post('/', async (req: Request, res: Response) => {
    const { username, email, password, PasswordConfirm } = req.body;
 
    if (!username || !email || !password || !PasswordConfirm) {
